@@ -1,0 +1,65 @@
+spring:
+  application:
+    name: admin-system
+  
+  # MySQL 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot_admin?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: 1qaz@WSX
+  
+  # SQL 初始化配置
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+      # 数据初始化已改为使用代码方式（DataInitializer），更安全准确
+      continue-on-error: false
+  
+  jpa:
+    hibernate:
+      ddl-auto: none  # 使用 SQL 脚本初始化，不使用 Hibernate 自动建表
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+  
+  # Redis 配置（分布式缓存）
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:  # 如果有密码，填写密码
+      database: 0
+      timeout: 3000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: -1ms
+
+server:
+  port: 8080
+
+# 应用配置
+app:
+  # 开发模式：true-显示详细错误信息，false-显示友好提示
+  # 生产环境请设置为 false
+  dev-mode: true
+
+# JWT 配置
+# 注意：HS512 算法要求密钥至少 64 字节 (512 位)
+# 可以使用以下命令生成安全的密钥：
+# openssl rand -base64 64
+jwt:
+  secret: mySecretKeyForHS512AlgorithmMustBeAtLeast64BytesLongToMeetSecurityRequirements123456789012345678901234567890
+  expiration: 86400000  # 24小时，单位：毫秒
+
+logging:
+  level:
+    root: INFO
+    com.training.admin: DEBUG
+
