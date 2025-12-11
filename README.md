@@ -24,7 +24,7 @@
 
 ## 运行与环境
 - 要求：JDK 17+，Node.js 16+。
-- 数据库：创建 `admin_system`；如需手工，执行对应章节 `database/schema.sql`（数据由 `DataInitializer` 自动生成，final-project 亦有对齐的 `database/init-data.sql` 供手动导入）。
+- 数据库：创建 `springboot_admin`；如需手工，执行对应章节 `database/schema.sql`（数据由 `DataInitializer` 自动生成，final-project 亦有对齐的 `database/init-data.sql` 供手动导入）。
 - 后端：`cd chapter-xx/backend && ./mvnw spring-boot:run`（Win 用 `mvnw.cmd`）。
 - 前端：`cd chapter-xx/frontend && npm install && npm run dev`。
 - final-project：需配置 Redis 与 MySQL，支持多节点共享缓存。

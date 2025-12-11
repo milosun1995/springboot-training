@@ -16,7 +16,7 @@
     <artifactId>admin-system</artifactId>
     <version>1.0.0</version>
     <name>admin-system</name>
-    <description>SpringBoot后台管理系统 - 第一章：登录功能</description>
+    <description>SpringBoot后台管理系统 - Final Project - 完整的 RBAC 权限管理系统</description>
     
     <properties>
         <java.version>17</java.version>

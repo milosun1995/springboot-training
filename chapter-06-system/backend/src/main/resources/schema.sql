@@ -40,5 +40,3 @@ CREATE TABLE sys_dict (
   KEY idx_dict_status (status)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-CREATE INDEX idx_dict_status ON sys_dict(status);
-
