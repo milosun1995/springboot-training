@@ -46,7 +46,6 @@ chapter-02-user/
 │   ├── src/main/java/com/training/admin/
 │   │   ├── config/                   # 配置类
 │   │   │   ├── CorsConfig.java       # 跨域配置
-│   │   │   ├── GlobalExceptionHandler.java  # 全局异常处理
 │   │   │   └── DataInitializer.java  # 数据初始化
 │   │   ├── controller/               # 控制器层
 │   │   │   ├── AuthController.java   # 认证接口
@@ -69,7 +68,8 @@ chapter-02-user/
 │   │   ├── common/
 │   │   │   └── Result.java           # 统一响应
 │   │   ├── exception/
-│   │   │   └── BusinessException.java
+│   │   │   ├── BusinessException.java
+│   │   │   └── GlobalExceptionHandler.java  # 全局异常处理
 │   │   └── util/
 │   │       ├── JwtUtil.java
 │   │       └── PasswordUtil.java

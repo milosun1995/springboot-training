@@ -57,7 +57,6 @@ final-project/
 │   │   │   ├── CorsConfig.java       # 跨域配置
 │   │   │   ├── SecurityConfig.java   # Spring Security 配置
 │   │   │   ├── SecurityFilter.java   # JWT 认证过滤器
-│   │   │   ├── GlobalExceptionHandler.java  # 全局异常处理
 │   │   │   └── DataInitializer.java  # 数据初始化
 │   │   ├── controller/               # 控制器层
 │   │   │   ├── AuthController.java   # 认证接口
@@ -96,7 +95,8 @@ final-project/
 │   │   ├── common/                   # 公共类
 │   │   │   └── Result.java           # 统一响应格式
 │   │   ├── exception/                # 异常类
-│   │   │   └── BusinessException.java
+│   │   │   ├── BusinessException.java
+│   │   │   └── GlobalExceptionHandler.java  # 全局异常处理
 │   │   └── util/                     # 工具类
 │   │       ├── JwtUtil.java          # JWT 工具
 │   │       └── PasswordUtil.java     # 密码工具
